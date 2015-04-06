@@ -1,0 +1,3 @@
+# NSColorList
+用代码实现将常用色值添加到ColorPicker中
+用正则分析了代码中的变量
