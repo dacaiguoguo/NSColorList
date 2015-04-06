@@ -72,7 +72,7 @@ int main(int argc, const char * argv[]) {
         NSMutableArray *subColorNameArray = [NSMutableArray new];
         NSMutableArray *subColorValueArray = [NSMutableArray new];
 
-        NSString *regularExpress = @"c\\w*Color\\s.*64\"";
+        NSString *regularExpress = @"c\\w*Color\\s.*\";";
         NSRange range = [fileContent rangeOfString:regularExpress options:NSRegularExpressionSearch];
  
         NSRange holeRange = NSMakeRange(0, fileContent.length);
@@ -82,6 +82,7 @@ int main(int argc, const char * argv[]) {
             NSString *value = subArray[1];
             value = [value stringByReplacingOccurrencesOfString:@"@" withString:@""];
             value = [value stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+            value = [value stringByReplacingOccurrencesOfString:@";" withString:@""];
             value = [value stringByReplacingOccurrencesOfString:@" " withString:@""];
             value = [value stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
             [subColorValueArray addObject:value];
