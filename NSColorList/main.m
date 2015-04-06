@@ -115,7 +115,9 @@ int main(int argc, const char * argv[]) {
 //       BOOL ret = [list writeToFile:@"/Users/sunyanguo/Library/Colors/Lvmama.clr"];
         BOOL ret = [list writeToFile:@"/Users/sunyanguo/Library/Colors/Lvmama2.clr"];
         assert(ret);
-        NSLog(@"Hello, World!%@",list);
+        NSLog(@"%@",list);
+        
+        NSLog(@"%@",[NSColorList availableColorLists]);
     }
     return 0;
 }

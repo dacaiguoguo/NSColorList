@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D17C6A81AD2B92C00C5EB65 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 9D17C6A71AD2B92C00C5EB65 /* README.md */; };
 		9D230FAE1AD26E2E00B44FA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D230FAD1AD26E2E00B44FA8 /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9D17C6A71AD2B92C00C5EB65 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9D230FAA1AD26E2E00B44FA8 /* NSColorList */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NSColorList; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D230FAD1AD26E2E00B44FA8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				9D230FAD1AD26E2E00B44FA8 /* main.m */,
+				9D17C6A71AD2B92C00C5EB65 /* README.md */,
 			);
 			path = NSColorList;
 			sourceTree = "<group>";
@@ -118,6 +121,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D17C6A81AD2B92C00C5EB65 /* README.md in Sources */,
 				9D230FAE1AD26E2E00B44FA8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,6 +236,7 @@
 				9D230FB31AD26E2E00B44FA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
