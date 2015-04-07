@@ -103,22 +103,26 @@ int main(int argc, const char * argv[]) {
         if ([subColorNameArray count] == 0) {
             return 0;
         }
-//        NSColorList *list = [[NSColorList alloc] initWithName:@"Lvmama" fromFile:@"/Users/sunyanguo/Library/Colors/Lvmama.clr"]; // 这里好像要绝对路径
+//        NSColorList *list2 = [[NSColorList alloc] initWithName:@"Custom" fromFile:[@"~/Library/Colors/Custom.clr" stringByStandardizingPath]]; // 这里要绝对路径
         NSColorList *list = [[NSColorList alloc] init];
 
 
         for ( int i=0; i< [subColorNameArray count]; i++) {
             [list setColor:hexColor(subColorValueArray[i]) forKey:subColorNameArray[i]];
-
         }
+        
+        
 //       NSColorList *colorList = [NSColorList colorListNamed:@"Apple"];
-        [list setColor:hexColor(cMainRed_Color) forKey:@"sunyanguo4"];
-//       BOOL ret = [list writeToFile:@"/Users/sunyanguo/Library/Colors/Lvmama.clr"];
-        BOOL ret = [list writeToFile:@"~/Library/Colors/Lvmama3.clr"];
+        [list setColor:hexColor(cMainRed_Color) forKey:@"test4"];
+//       BOOL ret = [list writeToFile:[@"~/Library/Colors/Custom.clr" stringByStandardizingPath]];
+        NSString *fileppp = @"~/Library/Colors/custom.clr";
+        NSString *writePath = [fileppp stringByStandardizingPath];// 这里要绝对路径
+        BOOL ret = [list writeToFile:writePath];
+
         assert(ret);
         NSLog(@"%@",list);
         
-        NSLog(@"%@",[NSColorList availableColorLists]);
+//        NSLog(@"%@",[NSColorList availableColorLists]);//输出所有的可以用的颜色列表
     }
     return 0;
 }
