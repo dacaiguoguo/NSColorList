@@ -65,7 +65,8 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
         
-        NSString *fileContent = [NSString stringWithContentsOfFile:@"/Users/sunyanguo/Documents/gitplace/NSColorList/NSColorList/main.m"
+        NSString *filePath = [NSString stringWithUTF8String:__FILE__];
+        NSString *fileContent = [NSString stringWithContentsOfFile:filePath
                                                           encoding:NSUTF8StringEncoding
                                                              error:nil];
         
@@ -102,7 +103,7 @@ int main(int argc, const char * argv[]) {
         if ([subColorNameArray count] == 0) {
             return 0;
         }
-//        NSColorList *list = [[NSColorList alloc] initWithName:@"Lvmama" fromFile:@"/Users/sunyanguo/Library/Colors/Lvmama.clr"];
+//        NSColorList *list = [[NSColorList alloc] initWithName:@"Lvmama" fromFile:@"/Users/sunyanguo/Library/Colors/Lvmama.clr"]; // 这里好像要绝对路径
         NSColorList *list = [[NSColorList alloc] init];
 
 
@@ -113,7 +114,7 @@ int main(int argc, const char * argv[]) {
 //       NSColorList *colorList = [NSColorList colorListNamed:@"Apple"];
         [list setColor:hexColor(cMainRed_Color) forKey:@"sunyanguo4"];
 //       BOOL ret = [list writeToFile:@"/Users/sunyanguo/Library/Colors/Lvmama.clr"];
-        BOOL ret = [list writeToFile:@"/Users/sunyanguo/Library/Colors/Lvmama2.clr"];
+        BOOL ret = [list writeToFile:@"~/Library/Colors/Lvmama3.clr"];
         assert(ret);
         NSLog(@"%@",list);
         
