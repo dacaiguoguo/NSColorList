@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9D17C6A81AD2B92C00C5EB65 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 9D17C6A71AD2B92C00C5EB65 /* README.md */; };
 		9D230FAE1AD26E2E00B44FA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D230FAD1AD26E2E00B44FA8 /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +103,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 9D230FA11AD26E2E00B44FA8;
@@ -121,7 +121,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D17C6A81AD2B92C00C5EB65 /* README.md in Sources */,
 				9D230FAE1AD26E2E00B44FA8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -70,7 +70,7 @@ NSColor *hexColor(NSString *hexColor) {
     range.location = 6;
     [[NSScanner scannerWithString:[hexColor substringWithRange:range]] scanHexInt:&alpha];
     
-    return [NSColor colorWithCalibratedRed:(float)(red/255.0f) green:(float)(green/255.0f) blue:(float)(blue/255.0f) alpha:(float)(alpha/100.0f)];
+    return [NSColor colorWithCalibratedRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:alpha/100.0];
 }
 
 
