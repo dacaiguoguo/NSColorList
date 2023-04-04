@@ -58,17 +58,14 @@ NSColor *hexColor(NSString *hexColor) {
         hexColor = [hexColor stringByAppendingString:@"64"];
     }
     unsigned int red, green, blue, alpha;
-    NSRange range;
-    range.length = 2;
-    
-    range.location = 0;
-    [[NSScanner scannerWithString:[hexColor substringWithRange:range]] scanHexInt:&red];
-    range.location = 2;
-    [[NSScanner scannerWithString:[hexColor substringWithRange:range]] scanHexInt:&green];
-    range.location = 4;
-    [[NSScanner scannerWithString:[hexColor substringWithRange:range]] scanHexInt:&blue];
-    range.location = 6;
-    [[NSScanner scannerWithString:[hexColor substringWithRange:range]] scanHexInt:&alpha];
+
+    [[NSScanner scannerWithString:[hexColor substringWithRange:NSMakeRange(0, 2)]] scanHexInt:&red];
+
+    [[NSScanner scannerWithString:[hexColor substringWithRange:NSMakeRange(2, 2)]] scanHexInt:&green];
+
+    [[NSScanner scannerWithString:[hexColor substringWithRange:NSMakeRange(4, 2)]] scanHexInt:&blue];
+
+    [[NSScanner scannerWithString:[hexColor substringWithRange:NSMakeRange(6, 2)]] scanHexInt:&alpha];
     
     return [NSColor colorWithCalibratedRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:alpha/100.0];
 }
@@ -133,7 +130,7 @@ int main(int argc, const char * argv[]) {
 //       BOOL ret = [list writeToFile:[@"~/Library/Colors/Custom.clr" stringByStandardizingPath]];
         NSString *fileppp = @"~/Library/Colors/Lvmama.clr";
         NSString *writePath = [fileppp stringByStandardizingPath];// 这里要绝对路径
-        BOOL ret = [list writeToFile:writePath];
+        BOOL ret = [list writeToURL:[NSURL fileURLWithPath:writePath] error:nil];
 
         assert(ret);
         NSLog(@"%@",list);
